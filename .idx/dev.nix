@@ -12,6 +12,7 @@
     # pkgs.nodePackages.nodemon
     pkgs.python3
     pkgs.nodejs
+    pkgs.react-static
   ];
   # Sets environment variables in the workspace
   env = {};

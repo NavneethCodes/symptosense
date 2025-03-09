@@ -1,0 +1,120 @@
+.LandingBg {
+    background-image: url('/home/user/symptosense/frontend/src/components/componentsCSS/landingBg2.jpg');
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.LPnavbar {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(90deg, #E0F7FA, #80DEEA, #B2EBF2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.symptosenseHeader {
+    color: #001F54;
+    font-size: calc(0.5*10vh);
+    margin-left: 2vw;
+}
+
+.logoImage {
+    height: 70%;
+    margin-left: 15vw;
+}
+
+.landingTextContainer {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+.typingAnimation {
+    color: white;
+    font-size: 4rem;
+    white-space: pre-line;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.highlightedText {
+    color: white;
+    font-size: 5rem;
+    background-color: #E6E6FA;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.highlightedText.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.subtextFade {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: -30px;
+    opacity: 0;
+    animation: subtleFadeIn 0.9s ease-out forwards;
+}
+
+@keyframes subtleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.joinNowButton {
+    background-color: #80DEEA;
+    color: #001F54;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation:subtleFadeIn 0.9s ease-out forwards;
+}
+
+.joinNowButton:hover {
+    background-color: #4DD0E1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.joinNowButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
