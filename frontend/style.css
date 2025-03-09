@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("bgnew.png"), linear-gradient(to bottom, #0250c5, #cc3483);
+}
+
+::selection {
+  color: #fff;
+  background: #583849;
+}
+
+.container {
+  width: 350px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 40px 30px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container header {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .form-outer form {
+  display: flex;
+  width: 300%;
+}
+
+.form-outer form .page {
+  width: 33.33%;
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.form-outer form .page .field {
+  width: 100%;
+  height: 45px;
+  margin: 35px 0;
+  display: flex;
+  position: relative;
+}
+
+form .page .field .label {
+  position: absolute;
+  top: -28px;
+  font-weight: 500;
+}
+
+form .page .field input, 
+form .page .field select {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+form .page .field input:focus {
+  border-color: #573044;
+}
+
+form .page .field select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #84c6ca;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+}
+
+form .page .field button:hover {
+  background: #000;
+}
+
+form .page .btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .page .btns button {
+  width: 48%;
+}
+
+.container .progress-bar {
+  display: flex;
+  margin: 30px 0;
+  user-select: none;
+}
+
+.container .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.container .progress-bar .step p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+  border-color: #6f939e;
+  background: #547280;
+}
+
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -45px;
+  height: 3px;
+  width: 40px;
+  background: #262626;
+}
+
+.progress-bar .step .bullet.active:after {
+  background: #7dbfc4;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+
+.progress-bar .step p.active {
+  color: #4136a0;
+  transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .form-outer form {
+    width: 300%;
+  }
+
+  .form-outer form .page {
+    width: 33.33%;
+  }
+
+  form .page .field {
+    width: 100%;
+  }
+
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
+    width: 30px;
+    right: -35px;
+  }
+}
