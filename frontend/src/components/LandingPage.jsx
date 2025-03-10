@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './componentsCSS/LandingPage.css';
 import heartbeatLogo from './heartbeat.png';
+import LandingPagePic from './componentsCSS/LandingPagePic.png'
+
 
 function LandingPage() {
     const [typedText, setTypedText] = useState('');
@@ -8,7 +10,7 @@ function LandingPage() {
     const [typedHighlight, setTypedHighlight] = useState('');
     const [showSubtext, setShowSubtext] = useState(false);
     const fullText = "Prevent, Predict and\nProtect with";
-    const highlightText = "Anomalyze";
+    const highlightText = "Symptosense";
     const subtextMessage = "Catch health anomalies early, stay ahead, and live healthier!";
 
     useEffect(() => {
@@ -34,14 +36,14 @@ function LandingPage() {
                       setTimeout(() => {
                     setShowSubtext(true);
                         setTimeout(() => {
-                      console.log('0.5 seconds after subtext is shown');
+                      console.log('0.5 seconds after subtext');
                     }, 100);
-                  }, 100);
+                  }, 200);
                 }
-              }, 20); 
+              }, 100); 
             }, 100);
           }
-        }, 20);
+        }, 50);
     
         return () => {
           clearInterval(typingInterval);
@@ -50,25 +52,39 @@ function LandingPage() {
 
     return (
         <div className='LandingBg'>
-            <div className='LPnavbar'>
-                <img src={heartbeatLogo} alt='Logo' className='logoImage'/>
-                <h2 className='symptosenseHeader'>Symptosense</h2>
-            </div>
-            <div className='landingTextContainer'>
-                <div className='textWrapper'>
-                    <h1 className='typingAnimation'>{typedText}</h1>
-                    <h1 className={`highlightedText ${showHighlight ? 'slide-in' : ''}`}>
-                        {typedHighlight}
-                    </h1>
-                    {showSubtext && (
-                        <>
-                            <h2 className='subtextFade'>{subtextMessage}</h2>
-                            <button className='joinNowButton'>Join Now!</button>
-                        </>
-                    )}
-                </div>
+    <div className='LPnavbar'>
+        <img src={heartbeatLogo} alt='Logo' className='logoImage'/>
+        <h2 className='symptosenseHeader'>Symptosense</h2>
+        <div className='nav-buttons'>
+            <button className='nav-button'>Insights</button>
+            <button className='nav-button'>Features</button>
+            <button className='nav-button'>About Us</button>
+        </div>
+        <div className='auth-links'>
+            <a href="/login" className='auth-link'>Login</a>
+            <a href="/signup" className='signup-button'>Signup</a>
+        </div>
+    </div>
+    <div className='landingContent'>
+        <div className='landingTextContainer'>
+            <div className='textWrapper'>
+                <h1 className='typingAnimation'>{typedText}</h1>
+                <h1 className={`highlightedText ${showHighlight ? 'slide-in' : ''}`}>
+                    {typedHighlight}
+                </h1>
+                {showSubtext && (
+                    <>
+                        <h2 className='subtextFade'>{subtextMessage}</h2>
+                        <button className='joinNowButton'>Join Now!</button>
+                    </>
+                )}
             </div>
         </div>
+        <div className='landingImageContainer'>
+            <img src={LandingPagePic} alt='Healthcare illustration' className='landingImage' />
+        </div>
+    </div>
+</div>
     );
 }
 

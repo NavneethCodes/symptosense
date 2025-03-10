@@ -1,5 +1,19 @@
+.selector-name {
+    -webkit-user-select: none; 
+    -ms-user-select: none;  
+    user-select: none; 
+}
+
+body {
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    margin: 0;
+    padding: 0;
+}
+
 .LandingBg {
-    background-image: url('/home/user/symptosense/frontend/src/components/componentsCSS/landingBg2.jpg');
+    background-image: url('C:\Users\Adish U\Desktop\Miniproject\symptosense\frontend\src\components\componentsCSS\landingBg2.jpg');
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -20,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    z-index: 100;
 }
 
 .symptosenseHeader {
@@ -33,18 +48,55 @@
     margin-left: 15vw;
 }
 
-.landingTextContainer {
+.landingContent {
     display: flex;
-    flex-grow: 1;
+    flex-direction: row;  
+    align-items: center; 
+    justify-content: space-between;
+    padding: 5% 10%; 
+}
+
+.landingTextContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.landingImageContainer {
+    width: 50%;
+    display: flex;
     align-items: center;
-    padding-left: 10%;
+    justify-content: center;
+}
+
+.landingImage {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: scale(1.2) translate(7vw, 10vh);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .textWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:5px;
+    gap: 5px;
 }
 
 .typingAnimation {
@@ -105,7 +157,7 @@
     margin-top: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation:subtleFadeIn 0.9s ease-out forwards;
+    animation: subtleFadeIn 0.9s ease-out forwards;
 }
 
 .joinNowButton:hover {
@@ -117,4 +169,55 @@
 .joinNowButton:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-links {
+    margin-left: 10vw; 
+    display: flex;
+    gap: 50px;
+    font-size: calc(0.3*10vh);
+    align-items: center;
+}
+
+.auth-link {
+    color: #001F54;
+    text-decoration: none; 
+    font-weight: 500; 
+}
+
+.signup-button {
+    background-color: #80DEEA;
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    margin-left: 7vw;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #001F54;
+    font-size: calc(0.3*10vh);
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-button:active, .nav-button.active {
+    background-color: #e0e0e0; 
 }
