@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './componentsCSS/LandingPage.css';
 import heartbeatLogo from './heartbeat.png';
 import LandingPagePic from './componentsCSS/LandingPagePic.png'
+import { Link } from 'react-router-dom';
 
 
 function LandingPage() {
@@ -61,7 +62,9 @@ function LandingPage() {
             <button className='nav-button'>About Us</button>
         </div>
         <div className='auth-links'>
-            <a href="/login" className='auth-link'>Login</a>
+        <Link to="/login">
+          <button className="auth-link">Login</button>
+        </Link>
             <a href="/signup" className='signup-button'>Signup</a>
         </div>
     </div>

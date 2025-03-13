@@ -38,7 +38,7 @@ body {
 }
 
 .symptosenseHeader {
-    color: #001F54;
+    color: #006064;
     font-size: calc(0.5*10vh);
     margin-left: 2vw;
 }
@@ -183,6 +183,7 @@ body {
     color: #001F54;
     text-decoration: none; 
     font-weight: 500; 
+    background-color: transparent;
 }
 
 .signup-button {
