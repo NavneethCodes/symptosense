@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './componentsCSS/LandingPage.css';
 import heartbeatLogo from './heartbeat.png';
-import LandingPagePic from './componentsCSS/LandingPagePic.png'
+import LandingPagePic from './componentsCSS/LandingPagePic.png';
 import { Link } from 'react-router-dom';
-
 
 function LandingPage() {
     const [typedText, setTypedText] = useState('');

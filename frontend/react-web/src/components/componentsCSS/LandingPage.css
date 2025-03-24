@@ -13,7 +13,7 @@ body {
 }
 
 .LandingBg {
-    background-image: url('C:\Users\Adish U\Desktop\Miniproject\symptosense\frontend\src\components\componentsCSS\landingBg2.jpg');
+    background-image: url('C:\Users\Adish U\Desktop\Miniproject\symptosense\frontend\react-web\src\components\componentsCSS\landingBg2.jpg');
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -54,6 +54,7 @@ body {
     align-items: center; 
     justify-content: space-between;
     padding: 5% 10%; 
+    margin-top: 60px;
 }
 
 .landingTextContainer {
@@ -130,7 +131,7 @@ body {
 .subtextFade {
     color: white;
     font-size: 1.5rem;
-    margin-top: -30px;
+    margin-top: -0px;
     opacity: 0;
     animation: subtleFadeIn 0.9s ease-out forwards;
 }
@@ -174,7 +175,7 @@ body {
 .auth-links {
     margin-left: 10vw; 
     display: flex;
-    gap: 50px;
+    gap: 10px;
     font-size: calc(0.3*10vh);
     align-items: center;
 }
