@@ -11,13 +11,13 @@
     z-index: 100;
 }
 
-.symptosenseHeader {
+.symptosenseHeaderLogin {
     color: #006064;
     font-size: calc(0.5*10vh);
     margin-left: 2vw;
 }
 
-.logoImage {
+.logoImageLogin {
     height: 70%;
     margin-left: 40vw;
 }

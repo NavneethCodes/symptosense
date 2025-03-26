@@ -24,8 +24,8 @@ function Login() {
   return (
     <>
       <div className='Loginnavbar'>
-        <img src={heartbeatLogo} alt='Logo' className='logoImage' />
-        <h2 className='symptosenseHeader'>Symptosense</h2>
+        <img src={heartbeatLogo} alt='Logo' className='logoImageLogin' />
+        <h2 className='symptosenseHeaderLogin'>Symptosense</h2>
       </div>
       <div className="login-container">
       <div className="login-box">
