@@ -3,11 +3,13 @@ import './componentsCSS/Homepage.css';
 import heartbeatLogo from './heartbeat.png';
 import DP from './componentsCSS/DP.jpeg';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Homepage({ name }) {
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const scrollLeft = (ref) => {
     if (ref.current) {
@@ -87,12 +89,12 @@ function Homepage({ name }) {
           </div>
           {/* <button className="scroll-button right" onClick={() => scrollRight(scrollRef2)}>&gt;</button> */}
         </div>
-        <div className="descEntry"  onClick={() => setShowModal(true)}>
+        <div className="descEntry"  onClick={() => navigate('/describe')}>
             <span>Your symptoms are not listed above? <br />Then describe them to us!</span>
             <span className="plus-icon">+</span>
         </div>
         
-        {showModal && (
+        {/* {showModal && (
                 <div className="modal-overlay" onClick={() => setShowModal(false)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <h2>Describe Your Symptoms</h2>
@@ -103,7 +105,7 @@ function Homepage({ name }) {
                         </div>
                     </div>
                 </div>
-            )}
+            )} */}
 
       </div>
     </div>
